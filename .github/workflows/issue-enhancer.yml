@@ -1,0 +1,16 @@
+name: IssueCraft
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  enhance-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - uses: nameless-traveler/issuecraft@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
