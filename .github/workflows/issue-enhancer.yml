@@ -11,6 +11,8 @@ jobs:
       issues: write
 
     steps:
-      - uses: nameless-traveler/issuecraft@v1.0.0
+      - uses: nameless-traveler/issuecraft@v1
+        with:
+          ai-provider: gemini
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
